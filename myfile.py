@@ -1,5 +1,0 @@
-salary = float(input("Введите зарплату за месяц: "))
-kredit = float(input("Введите сумму кредита за месяц: "))
-nalogi = float(input("Введите сумму налогов: "))
-money = float(salary - kredit - nalogi )
-print("Осталось: ", money)
