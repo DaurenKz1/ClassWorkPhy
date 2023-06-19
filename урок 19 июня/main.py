@@ -9,14 +9,14 @@ dude.earn(25000)
 dude.pay(3500)
 dude.show_info()
 
-tmp_ticket = Ticket(23, "Алматы", "Ташкент", "2023-06-16 07:59", dude)
+tmp_ticket = Ticket(23, "Алматы", "Анталия", "2023-06-16 20:00", dude)
 
 kassa = Kassa()
 
 
-tmp_train = Train('Алматы', "Анталия", '2023-06-16 20:00')
+tmp_train = Train(kassa,'Алматы', "Анталия", '2023-06-16 20:00')
 kassa.buy_ticket(dude, 'Алматы', 'Анталия', tmp_train)
-dude.ticket.show()
+#dude.ticket.show()
 tmp_train.go(dude)
 
 

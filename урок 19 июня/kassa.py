@@ -1,6 +1,7 @@
 from ticket import Ticket
 class Kassa:
     balance = 0
+    tickets = []
 
 
     def get_price(self, source, destination):
@@ -12,8 +13,15 @@ class Kassa:
         if money > 0:
             self.balance += money
             ticket = Ticket(train.number, source, destination, train.datetime, passenger)
-            passenger.ticket = ticket
+            self.tickets.append(ticket)
             return True
         else:
             return False
+
+    def get_ticket(self,passenger,train_number,datetime):
+        for x in self.tickets:
+            if x.passenger.iin == passenger.iin and x.train_id == train_number and x.datetime == datetime:
+                return x
+    def delete_ticket(self, ticket):
+        self.tickets.remove(ticket)
 print("Kassa")
